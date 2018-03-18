@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+}
+
+#physics_menu{
+    height: 60px;
+    background: #616161;
+}
+
+#physics_logo{
+    margin-left: 5;
+}
+
+#physics_logo img{
+    width: 230px;
+    height: 60px;
+}
+
+#physics_sidebar{
+    min-height: 10px;
+    background: #d78c00;
+}
+
+#physics_sidebar a{
+    text-transform: lowercase;
+    color: white;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.physics_button {
+    border: 0;
+    border-bottom: 5px solid #d88b00;
+    padding-bottom: 5px;
+    color: #000000;
+}
+
+#container{
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.label_connect{
+    text-transform: capitalize;
+    color: #000000;
+    border-bottom: 1px solid #616161;
+}
+
+input{
+    width:100%;
+    margin-bottom: 10px;
+}
+
+.red{
+    background: #5d0000a1;
+}
+
+.green{
+    background: #138413;
+}
+
+.flash_message{
+    width: 100%;
+    padding: 5px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    border-bottom: 1px solid black;
+    background: #d88b00;
+    color: white;
+    padding: 1px;
+    margin: 0;
+    padding: 5px;
+}
+
+tr {
+    text-align: center;
+    background: #f1efef;
+}
+
+tr a {
+    text-decoration: none;
+    color: black;
+}
+
+input {
+    border: 1px solid #d88a02;
+    padding: 5px;
+    margin-top: 5px;
+}
