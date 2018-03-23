@@ -5,7 +5,7 @@ It retrieves data passing through the network and sends it to a control panel.
 It works the same way as a botnet by receiving remote commands.
 (you can imagine that as a black box)
 
-# INSTALLATION
+### INSTALLATION
 
   > 1) composer update
 
