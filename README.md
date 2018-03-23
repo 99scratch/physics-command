@@ -20,3 +20,5 @@ You can check [repository](https://github.com/graniet/physics-hardware) of physi
   > 4) php artisan physics:createUser username password
   
   > 5) php artisan key:generate
+  
+  > 6) configure your domain to public/ folder.
