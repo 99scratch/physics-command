@@ -14,19 +14,19 @@ class CreateDevicesLogsTable extends Migration
     public function up()
     {
         Schema::create('devices_logs', function (Blueprint $table) {
-            $table->increments('log_id');
-            $table->text('log_device');
-            $table->text('log_layers');
-            $table->text('log_type');
-            $table->text('log_host');
-            $table->text('log_url');
-            $table->text('log_method');
-            $table->text('log_form');
-            $table->text('log_cookie');
-            $table->text('log_headers');
-            $table->longText('log_requestdump');
-            $table->text('log_src');
-            $table->text('log_dest');
+            $table->increments('log_id')->nullable();
+            $table->text('log_device')->nullable();
+            $table->text('log_layers')->nullable();
+            $table->text('log_type')->nullable();
+            $table->text('log_host')->nullable();
+            $table->text('log_url')->nullable();
+            $table->text('log_method')->nullable();
+            $table->text('log_form')->nullable();
+            $table->text('log_cookie')->nullable();
+            $table->text('log_headers')->nullable();
+            $table->longText('log_requestdump')->nullable();
+            $table->text('log_src')->nullable();
+            $table->text('log_dest')->nullable();
             $table->timestamps();
         });
     }

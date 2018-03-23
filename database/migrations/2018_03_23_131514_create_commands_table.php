@@ -15,9 +15,9 @@ class CreateCommandsTable extends Migration
     {
         Schema::create('commands', function (Blueprint $table) {
             $table->increments('command_id');
-            $table->string('command_device');
-            $table->string('command_text');
-            $table->string('command_exec');
+            $table->string('command_device')->nullable();
+            $table->string('command_text')->nullable();
+            $table->string('command_exec')->nullable();
             $table->timestamps();
         });
     }

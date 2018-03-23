@@ -14,11 +14,11 @@ class CreateDevicesTable extends Migration
     public function up()
     {
         Schema::create('devices', function (Blueprint $table) {
-            $table->increments('device_id');
-            $table->integer('device_online');
-            $table->string('device_power');
-            $table->string('device_name');
-            $table->string('device_address');
+            $table->increments('device_id')->nullable();
+            $table->integer('device_online')->nullable();
+            $table->string('device_power')->nullable();
+            $table->string('device_name')->nullable();
+            $table->string('device_address')->nullable();
             $table->timestamps();
         });
     }

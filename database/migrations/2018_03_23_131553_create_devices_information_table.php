@@ -14,10 +14,10 @@ class CreateDevicesInformationTable extends Migration
     public function up()
     {
         Schema::create('devices_information', function (Blueprint $table) {
-            $table->increments('information_id');
-            $table->integer('information_device_id');
-            $table->text('information_type');
-            $table->longText('information_text');
+            $table->increments('information_id')->nullable();
+            $table->integer('information_device_id')->nullable();
+            $table->text('information_type')->nullable();
+            $table->longText('information_text')->nullable();
             $table->timestamps();
         });
     }
