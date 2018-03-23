@@ -13,4 +13,4 @@ It works the same way as a botnet by receiving remote commands.
   
   > 3) php artisan migrate
   
-  > 4) create user account with ```php artisan physics:createUser username password```
+  > 4) create user account with ```php php artisan physics:createUser username password ```
