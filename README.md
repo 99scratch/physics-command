@@ -7,8 +7,10 @@ It works the same way as a botnet by receiving remote commands.
 
 # INSTALLATION
 
-  > 1) generate .env with database information
+  > 1) composer update
+
+  > 2) generate .env with database information
   
-  > 2) php artisan migrate
+  > 3) php artisan migrate
   
-  > 3) create user account with php physics:createuser --username username --password password
+  > 4) create user account with ```php artisan physics:createUser username password```
