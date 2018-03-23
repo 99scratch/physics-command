@@ -8,6 +8,7 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Support\Facades\Session;
+use App\Model\Events;
 
 class Controller extends BaseController
 {
@@ -17,5 +18,19 @@ class Controller extends BaseController
 
         Session::flash("message.level", $level);
         Session::flash("message.content", $text);
+    }
+
+    public function insertEvent($device, $title, $body = '') {
+
+        if($device != '' && $title != ''){
+
+            $event = new Events();
+            $event->event_title = $title;
+            $event->event_body = $body;
+            $event->event_device = $device;
+            $event->save();
+            return true;
+        }
+        return false;
     }
 }

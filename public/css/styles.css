@@ -1,10 +1,11 @@
 body{
     margin: 0;
+    background-color: #e8e8e8 !important;
 }
 
 #physics_menu{
     height: 60px;
-    background: #616161;
+    background: white;
 }
 
 #physics_logo{
@@ -83,7 +84,7 @@ th {
 
 tr {
     text-align: center;
-    background: #f1efef;
+    background: #ffffff;
 }
 
 tr a {
@@ -95,4 +96,93 @@ input {
     border: 1px solid #d88a02;
     padding: 5px;
     margin-top: 5px;
+}
+
+.orange {
+    color: #d88b00;
+}
+
+.txtgreen{
+
+    color: green;
+}
+
+pre {
+    width: 95%;
+    min-height: 300px;
+    border: 0px;
+    line-height: 1.5;
+    font-size: 13px;
+    font-weight: 400;
+    color: black;
+    background-color: #ffffff;
+    padding:5px;
+
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;
+}
+
+.prev_link{
+    margin-bottom: 5px;
+    border-top: 3px solid #d88b00;
+    background: #ffffff;
+    padding: 5px;
+    font-size: 0.8em;
+    border-left: 3px #d6d1d1 solid;
+    border-right: 1px #ffffff solid;
+    border-bottom: 1px solid white;
+}
+
+.event {
+    background: white;
+    border: 1px solid #e4e4e4;
+    margin-bottom: 5px;
+}
+
+.event_title {
+    padding: 5px;
+    border: 5px solid #d88b00;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.event_body {
+    padding: 5px;
+    line-height: 1.5;
+}
+
+.event_body pre {
+    min-height: 0px;
+}
+
+.pagination {
+    list-style: none;
+    min-height: 20px;
+    border: 3px solid #dfa959;
+    background: white;
+}
+
+.pagination li {
+    float: left;
+    margin-right: 4px;
+    margin-left: 0px;
+}
+
+.pagination .active {
+    color: #dfa959;
+}
+
+.pagination a {
+    text-decoration: none;
+}
+
+.titlediv {
+    background: white;
+    padding: 1px;
+    border-top: 2px solid #d88a02;
+    font-size: 14px;
+    text-align: center;
 }

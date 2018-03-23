@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class DevicesLogs extends Model
 {
-    protected $table = 'deviceslogs';
+    protected $table = 'devices_logs';
     protected $primaryKey = 'log_id';
 }

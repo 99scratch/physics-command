@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class CreateDevicesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->increments('user_id');
-            $table->string('user_login');
-            $table->string('user_password');
-            $table->string('account_header');
+        Schema::create('devices', function (Blueprint $table) {
+            $table->increments('device_id');
+            $table->integer('device_online');
+            $table->string('device_power');
+            $table->string('device_name');
+            $table->string('device_address');
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        //
     }
 }
