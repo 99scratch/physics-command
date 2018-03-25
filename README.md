@@ -5,7 +5,11 @@ It retrieves data passing through the network and sends it to a control panel.
 It works the same way as a botnet by receiving remote commands.
 (you can imagine that as a black box)
 
-### INSTALLATION
+## physics hardware 
+
+You can check [repository](https://github.com/graniet/physics-hardware) of physics-hardware
+
+## INSTALLATION
 
   > 1) composer update
 
@@ -13,4 +17,10 @@ It works the same way as a botnet by receiving remote commands.
   
   > 3) php artisan migrate
   
-  > 4) create user account with php artisan physics:createUser username password
+  > 4) php artisan physics:createUser username password
+  
+  > 5) php artisan key:generate
+  
+  > 6) configure your domain to public/ folder.
+  
+  > 7) configure a cronjob (* * * * * php /physics-commandProject/artisan schedule:run >> /dev/null 2>&1)
