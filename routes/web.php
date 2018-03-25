@@ -16,6 +16,7 @@ Route::middleware(['checkKey'])->group(function () {
 
     Route::get('/gate/listen', 'Api\ApiController@listenCommand');
     Route::post('/gate/send', 'Api\ApiController@sendElement');
+    Route::get('/gate/checkStatus', 'Api\ApiController@forceEndCommand');
 });
 
 Route::get('/', function (){

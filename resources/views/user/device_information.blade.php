@@ -54,4 +54,27 @@
             @endforeach
         @endif
     </table>
+    <div class="titlediv">BLE environnement</div>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Value</th>
+        </tr>
+        @if(count($ble) < 1)
+            <tr>
+                <td>No BLE environnement  (physics.ble.start)</td>
+                <td></td>
+            </tr>
+        @else
+            @foreach($ble as $devise)
+                @php
+                    $split = explode('&', $devise->information_text);
+                @endphp
+                <tr>
+                    <td>@if(isset($split[0])) {{ $split[0] }} @else Error no element found. @endif</td>
+                    <td>@if(isset($split[1])) {{ $split[1] }} @else Error no element found. @endif</td>
+                </tr>
+            @endforeach
+        @endif
+    </table>
 @endsection

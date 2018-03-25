@@ -28,6 +28,10 @@ class DevicesController extends Controller
         [
             "command" => "physics.get.env",
             "information" => "Get information of hardware environment."
+        ],
+        [
+            "command" => "physics.ble.start",
+            "information" => "Get information of BLE environment."
         ]
     ];
 
@@ -149,8 +153,13 @@ class DevicesController extends Controller
             ->where('information_type', 'environment')
             ->get();
 
+        $deviceBle = DevicesInformation::where('information_device_id', $device->device_id)
+            ->where('information_type' , 'BLE')
+            ->get();
+
         return view('user.device_information')
             ->with('environments', $variableEnv)
-            ->with('wifis', $deviceWifi);
+            ->with('wifis', $deviceWifi)
+            ->with('ble', $deviceBle);
     }
 }

@@ -13,6 +13,23 @@ use App\Model\Commands;
 class ApiController extends Controller
 {
 
+    protected function forceEndCommand() {
+        $device_name = "192.168.0.24";
+        $last_command = Commands::where('command_device', $device_name)
+            ->orderBy('command_id', 'DESC')->first();
+
+        if($last_command) {
+            $created_at = $last_command->created_at;
+            $endtime = date('Y-m-d H:i:s', strtotime("+01 minutes", strtotime($created_at)));
+            $current_data = date('Y-m-d H:i:s');
+            if($current_data >= $endtime){
+                echo trim("1");
+            } else {
+                echo trim("0");
+            }
+        }
+    }
+
     protected function getCommand($device_name) {
 
         $select_command = Commands::where('command_device', $device_name)
@@ -147,6 +164,18 @@ class ApiController extends Controller
             $log->information_text = "iface ipv4&".$ipv4_address;
             $log->save();
 
+        } else if($data->insertType == "insertBLE" && isset($data->data['BleName'])) {
+
+            $select_device = DevicesInformation::where('information_device_id', $select_devices->device_id)
+                ->where('information_text', $data->data['BleName']."&".$data->data['BleUUID'])
+                ->first();
+            if(!$select_device) {
+                $log = new DevicesInformation();
+                $log->information_device_id = $select_devices->device_id;
+                $log->information_type = "BLE";
+                $log->information_text = $data->data['BleName'] . "&" . $data->data['BleUUID'];
+                $log->save();
+            }
         }
     }
 }
