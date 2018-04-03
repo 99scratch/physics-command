@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\Api;
 
 use App\Model\DevicesInformation;
@@ -14,7 +13,7 @@ class ApiController extends Controller
 {
 
     protected function forceEndCommand() {
-        $device_name = "192.168.0.24";
+        $device_name = $_SERVER['REMOTE_ADDR'];
         $last_command = Commands::where('command_device', $device_name)
             ->orderBy('command_id', 'DESC')->first();
 
@@ -178,4 +177,6 @@ class ApiController extends Controller
             }
         }
     }
+
+
 }
